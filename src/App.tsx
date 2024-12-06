@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/products" replace />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/create-product" element={<CreateProduct />} />
       </Routes>
     </>

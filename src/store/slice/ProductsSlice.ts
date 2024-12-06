@@ -6,6 +6,10 @@ interface Product {
   name: string;
   price: string;
   like: boolean;
+  descriptions: string;
+  weight: number;
+  country_manufacture: string;
+  time: string;
 }
 
 interface ProductsState {
@@ -32,13 +36,23 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
-// Создание слайса
 const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
     setShowLikedOnly: (state, action) => {
       state.showLikedOnly = action.payload;
+    },
+    toggleLike: (state, action) => {
+      const productId = action.payload;
+      const product = state.products.find((item) => item.id === productId);
+      if (product) {
+        product.like = !product.like;
+      }
+    },
+    removeProduct: (state, action) => {
+      const productId = action.payload;
+      state.products = state.products.filter((item) => item.id !== productId);
     },
   },
   extraReducers: (builder) => {
@@ -56,5 +70,6 @@ const productsSlice = createSlice({
       });
   },
 });
-export const { setShowLikedOnly } = productsSlice.actions;
+export const { setShowLikedOnly, toggleLike, removeProduct } =
+  productsSlice.actions;
 export default productsSlice.reducer;

@@ -1,56 +1,60 @@
 [
   {
     "id": 1,
-    "img": "http://api.ru/images/1.png",
+    "img": "/images/1.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
-    "like": true
+    "like": true,
+    "descriptions": "описания",
+    "weight": "вес",
+    "country_manufacture": "кто произвел",
+    "time": "время длбовления"
   },
   {
     "id": 2,
-    "img": "http://api.ru/images/2.png",
+    "img": "/images/2.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false
   },
   {
     "id": 3,
-    "img": "http://api.ru/images/3.png",
+    "img": "/images/3.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false
   },
   {
     "id": 4,
-    "img": "http://api.ru/images/4.png",
+    "img": "/images/4.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false
   },
   {
     "id": 5,
-    "img": "http://api.ru/images/5.png",
+    "img": "/images/5.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false
   },
   {
     "id": 6,
-    "img": "http://api.ru/images/6.png",
+    "img": "/images/6.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false
   },
   {
     "id": 7,
-    "img": "http://api.ru/images/7.png",
+    "img": "/images/7.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false
   },
   {
     "id": 8,
-    "img": "http://api.ru/images/8.png",
+    "img": "/images/8.png",
     "name": "Ноутбук E10 ETBook i5-12450H",
     "price": 570,
     "like": false

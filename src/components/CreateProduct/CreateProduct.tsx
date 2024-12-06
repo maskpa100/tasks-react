@@ -1,8 +1,10 @@
+import FormProduct from "../FormProduct/FormProduct";
 import s from "./CreateProduct.module.scss";
 function CreateProduct() {
   return (
-    <div>
-      <h1>CreateProduct</h1>
+    <div className={s.createProduct}>
+      <h1>Добавление товара</h1>
+      <FormProduct />
     </div>
   );
 }
