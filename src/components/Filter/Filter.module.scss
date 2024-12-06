@@ -5,10 +5,11 @@
   margin: 20px;
   text-align: center;
   .like {
+    display: inline-block;
     background-color: aquamarine;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
-    margin-top: 20px 0;
+    margin: 20px 0 10px;
   }
 }

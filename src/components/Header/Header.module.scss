@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #eaeaea;
+  padding: 5px 25px;
+  .logo {
+    font-size: 34px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+  }
+  .button {
+    padding: 5px 20px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+  }
+}
