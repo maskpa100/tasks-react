@@ -1,0 +1,14 @@
+.filter {
+  width: 250px;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  .like {
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px 0;
+  }
+}
