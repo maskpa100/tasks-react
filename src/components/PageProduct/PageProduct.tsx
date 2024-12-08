@@ -1,10 +1,10 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store";
-import s from "./Product.module.scss";
+import s from "./PageProduct.module.scss";
 import { removeProduct } from "../../store/slice/ProductsSlice";
 
-function Product() {
+function PageProduct() {
   const { id } = useParams<{ id: string }>();
   const productId = Number(id);
   const dispatch = useDispatch<AppDispatch>();
@@ -73,7 +73,9 @@ function Product() {
             <b>Описания:</b> {product.descriptions}
           </p>
           <div className={s.actions}>
-            <div className={s.edit}>Редактировать</div>
+            <Link to={`/edit-product/${id}`} className={s.edit}>
+              Редактировать
+            </Link>
             <div
               className={s.delete}
               onClick={() => handleRemoveProduct(product.id)}>
@@ -86,4 +88,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default PageProduct;

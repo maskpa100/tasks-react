@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  .pageButton {
+    background-color: aquamarine;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .active {
+    background-color: #d1d6d6;
+    cursor: not-allowed;
+  }
+}

@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-interface Product {
+export interface Product {
   id: number;
   img: string;
   name: string;
@@ -16,17 +16,18 @@ interface ProductsState {
   products: Product[];
   loading: boolean;
   error: string | null;
-  showLikedOnly: boolean; // поле для фильтрации
+  showLikedOnly: boolean;
+  search: string | null;
 }
 
 const initialState: ProductsState = {
   products: [],
   loading: false,
   error: null,
-  showLikedOnly: false, // по умолчанию не фильтруем
+  showLikedOnly: false,
+  search: null,
 };
 
-// Асинхронный экшен для получения продуктов
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
@@ -54,6 +55,22 @@ const productsSlice = createSlice({
       const productId = action.payload;
       state.products = state.products.filter((item) => item.id !== productId);
     },
+    addProduct: (state, action) => {
+      const newProduct = action.payload;
+      state.products.push(newProduct);
+    },
+    updateProductById: (state, action) => {
+      const updatedProduct = action.payload;
+      const index = state.products.findIndex(
+        (product) => product.id === updatedProduct.id
+      );
+      if (index !== -1) {
+        state.products[index] = updatedProduct;
+      }
+    },
+    setSearch: (state, action) => {
+      state.search = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -70,6 +87,12 @@ const productsSlice = createSlice({
       });
   },
 });
-export const { setShowLikedOnly, toggleLike, removeProduct } =
-  productsSlice.actions;
+export const {
+  setShowLikedOnly,
+  toggleLike,
+  removeProduct,
+  addProduct,
+  updateProductById,
+  setSearch,
+} = productsSlice.actions;
 export default productsSlice.reducer;
