@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route
           path="/tasks-react/"
-          element={<Navigate to="/products" replace />}
+          element={<Navigate to="/tasks-react/products" replace />}
         />
         <Route
           path="/tasks-react/products"
