@@ -56,7 +56,7 @@ function PageProducts({
                 />
               )}
             </div>
-            <Link to={`/product/${item.id}`} className={s.link}>
+            <Link to={`/tasks-react/product/${item.id}`} className={s.link}>
               <img src={item.img} alt="Product" />
               <div className={s.name}>{item.name}</div>
               <div className={s.price}>{item.price} руб</div>

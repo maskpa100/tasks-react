@@ -17,11 +17,23 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/products" replace />} />
-        <Route path="/products" element={<ContainerPageProduct />} />
-        <Route path="/product/:id" element={<PageProduct />} />
-        <Route path="/create-product" element={<PageCreateProduct />} />
-        <Route path="/edit-product/:id" element={<PageEditProduct />} />
+        <Route
+          path="/tasks-react/"
+          element={<Navigate to="/products" replace />}
+        />
+        <Route
+          path="/tasks-react/products"
+          element={<ContainerPageProduct />}
+        />
+        <Route path="/tasks-react/product/:id" element={<PageProduct />} />
+        <Route
+          path="/tasks-react/create-product"
+          element={<PageCreateProduct />}
+        />
+        <Route
+          path="/tasks-react/edit-product/:id"
+          element={<PageEditProduct />}
+        />
       </Routes>
     </>
   );

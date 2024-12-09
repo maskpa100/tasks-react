@@ -25,28 +25,32 @@ function PageProduct() {
     dispatch(removeProduct(id));
 
     if (nextProduct) {
-      navigate(`/product/${nextProduct.id}`);
+      navigate(`/tasks-react/product/${nextProduct.id}`);
     } else if (prevProduct) {
-      navigate(`/product/${prevProduct.id}`);
+      navigate(`/tasks-react/product/${prevProduct.id}`);
     } else {
-      navigate("/");
+      navigate("/tasks-react/");
     }
   };
   return (
     <div className={s.productPage}>
       <div className={s.navigation}>
         {prevProduct ? (
-          <Link to={`/product/${prevProduct.id}`} className={s.back}>
+          <Link
+            to={`/tasks-react/product/${prevProduct.id}`}
+            className={s.back}>
             Предыдущий товар
           </Link>
         ) : (
           <div className={`${s.back} ${s.disabled}`}>Предыдущий товар</div>
         )}
-        <Link to="/" className={s.home}>
+        <Link to="/tasks-react/" className={s.home}>
           На главную
         </Link>
         {nextProduct ? (
-          <Link to={`/product/${nextProduct.id}`} className={s.next}>
+          <Link
+            to={`/tasks-react/product/${nextProduct.id}`}
+            className={s.next}>
             Следующий товар
           </Link>
         ) : (
@@ -73,7 +77,7 @@ function PageProduct() {
             <b>Описания:</b> {product.descriptions}
           </p>
           <div className={s.actions}>
-            <Link to={`/edit-product/${id}`} className={s.edit}>
+            <Link to={`/tasks-react/edit-product/${id}`} className={s.edit}>
               Редактировать
             </Link>
             <div
