@@ -31,7 +31,9 @@ const initialState: ProductsState = {
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
-    const response = await fetch("http://localhost:3000/products/receive.json");
+    const response = await fetch(
+      "https://maskpa100.github.io/tasks-react/products/receive.json"
+    );
     const data = await response.json();
     return data;
   }
