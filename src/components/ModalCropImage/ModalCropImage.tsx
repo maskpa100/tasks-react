@@ -1,7 +1,6 @@
 import { SetStateAction, useRef, useState } from "react";
 import s from "./ModalCropImage.module.scss";
 import AvatarEditor from "react-avatar-editor";
-import { Dispatch } from "@reduxjs/toolkit";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
 type Props = {

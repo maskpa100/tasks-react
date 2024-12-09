@@ -9,6 +9,9 @@
     font-size: 20px;
     border-radius: 12px;
     cursor: pointer;
+    &:hover {
+      background-color: #4cefb8;
+    }
   }
   .active {
     background-color: #d1d6d6;

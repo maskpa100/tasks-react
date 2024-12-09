@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import FormProduct from "../FormProduct/FormProduct";
+import FormProduct from "../../components/FormProduct/FormProduct";
 import { useSelector } from "react-redux";
 import { selectProductById } from "../../store/slice/selectors";
 

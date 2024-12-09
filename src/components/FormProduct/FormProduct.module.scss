@@ -79,6 +79,9 @@
       margin-top: 15px;
       margin-bottom: 50px;
       cursor: pointer;
+      &:hover {
+        background-color: #4cefb8;
+      }
     }
     .error {
       color: red;

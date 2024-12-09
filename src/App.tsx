@@ -1,8 +1,8 @@
 import Header from "./components/Header/Header";
-import PageCreateProduct from "./components/PageCreateProduct/PageCreateProduct";
-import PageEditProduct from "./components/PageEditProduct/PageEditProduct";
-import PageProduct from "./components/PageProduct/PageProduct";
-import PageProducts from "./components/PageProducts/PageProducts";
+import PageCreateProduct from "./pages/PageCreateProduct/PageCreateProduct";
+import PageEditProduct from "./pages/PageEditProduct/PageEditProduct";
+import PageProduct from "./pages/PageProduct/PageProduct";
+import ContainerPageProduct from "./pages/PageProducts/ContainerPageProduct";
 
 import {
   BrowserRouter as Router,
@@ -18,7 +18,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Navigate to="/products" replace />} />
-        <Route path="/products" element={<PageProducts />} />
+        <Route path="/products" element={<ContainerPageProduct />} />
         <Route path="/product/:id" element={<PageProduct />} />
         <Route path="/create-product" element={<PageCreateProduct />} />
         <Route path="/edit-product/:id" element={<PageEditProduct />} />

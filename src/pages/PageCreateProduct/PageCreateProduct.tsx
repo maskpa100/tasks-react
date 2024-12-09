@@ -1,4 +1,4 @@
-import FormProduct from "../FormProduct/FormProduct";
+import FormProduct from "../../components/FormProduct/FormProduct";
 function PageCreateProduct() {
   return <FormProduct page="create" />;
 }

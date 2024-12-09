@@ -1,13 +1,6 @@
 .productPage {
   padding: 20px 40px;
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    .disabled {
-      background-color: #c7c7c7;
-      cursor: not-allowed;
-    }
-  }
+
   .product {
     display: flex;
     padding-top: 30px;
@@ -41,9 +34,23 @@
     text-decoration: none;
     color: #000;
     cursor: pointer;
+    &:hover {
+      background-color: #4cefb8;
+    }
   }
   .delete {
     background-color: #bd3434;
     color: #fff;
+    &:hover {
+      background-color: #dc4a4a;
+    }
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    .disabled {
+      background-color: #c7c7c7;
+      cursor: not-allowed;
+    }
   }
 }

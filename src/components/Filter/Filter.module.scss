@@ -12,5 +12,8 @@
     border-radius: 15px;
     cursor: pointer;
     margin: 20px 0 10px;
+    &:hover {
+      background-color: #4cefb8;
+    }
   }
 }
